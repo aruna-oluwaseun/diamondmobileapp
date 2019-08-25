@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar primary>
+    <ion-title>Referal Bonus</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-list-header *ngFor="let s of sums;">
+      <ion-avatar item-start >
+        <img [src]="user.imageUrl ? user.imageUrl : placeholderPicture">
+      </ion-avatar>
+      <h3 class="username">Referal Bonus : ₦ {{s.capital * 0.04 | number }}</h3>
+       <h3 class="username">Referal Id : {{ username  }}</h3>
+     
+    </ion-list-header>
+  </ion-list>
+ <ion-content>
+        <div class="row header" style="background-color: lightgrey">
+          <div class="col">Username</div>
+          <div class="col">Phone Number</div>
+          <div class="col">Capital</div>
+          <div class="col">Date</div>
+          <div class="col">status</div>
+        </div>
+        <div class="row" *ngFor="let d of referals;" style="background-color:#d3d3d31f;padding:10px 10px 10px 10px">
+          <div class="col"> {{ d.usn}}</div>
+          <div class="col">{{d. phone}}</div>
+          <div class="col">{{ d.capital   }}</div>
+          <div class="col">{{ d.date   }}  </div>
+          <div class="col">{{ d.status  }} </div>
+        </div>
+    </ion-content>
+</ion-content>

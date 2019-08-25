@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Deposit</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content >
+  <div id="profile-bg" [ngStyle]="{'background-image': 'url(' + imageUrl +')'}"></div>
+  <div id="content">
+     
+    <ion-item>
+    <ion-label>Package</ion-label>
+    <ion-select >
+      <ion-option value="local">Local</ion-option>
+      <ion-option value="Local Extra">Local Extra</ion-option>
+       <ion-option value="International">International</ion-option>
+    </ion-select>
+  </ion-item>
+    <ion-item>
+       <ion-label>POP</ion-label>
+     <ion-input type="file" ></ion-input>
+    
+    </ion-item>
+    <ion-item>
+      <ion-label>Amount</ion-label>
+      <ion-input type="text" ></ion-input>
+    </ion-item>
+
+   
+  <button ion-button color="dark" round outline>Submit</button>
+</div>
+</ion-content>
+

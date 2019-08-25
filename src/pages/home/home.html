@@ -1,0 +1,59 @@
+<ion-content class="page-background transparent-header">
+  <ion-header>
+    <ion-navbar  >
+        <ion-buttons >
+            <button ion-button icon-only menuToggle>
+              <ion-icon name="menu"></ion-icon>
+            </button>
+          </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  <div class="welcome-header">
+    <div class="content">
+      <div class="title">Investment</div>
+      <ion-row no-padding *ngFor="let n of navs">
+          <ion-col col-6 class="subtitle">
+              <p class="rank">Total Deposit</p>
+              <p class="name"><b>₦{{n.total  | number}}</b></p>
+            </ion-col>
+            <ion-col col-6 class="subtitle">
+              <p class="usd">Total Investment</p>
+              <p class="evolution"><b>{{n.rows}}</b></p>
+            </ion-col>
+      </ion-row>
+    </div>
+    <button ion-fab color="dark" class="refresh"><ion-icon name="md-refresh"></ion-icon></button>
+  </div>
+  <div class="body" padding>
+    <div class="currencies">
+    
+       <ion-row class="currency" *ngFor="let d of customers; let index = index" (click)="withdraw(d.id,d.capital,d.daily,d.account,d.num,d.bank)">
+        <!-- <ion-col class="image">
+        <img src="{{'assets/img/cash/'+d.symbol+'.png'}}" alt="">  
+        </ion-col> -->
+        <ion-col col-4 class="text">
+          <p class="rank"> Amount</p>
+          <p class="name">{{d.capital | number}}</p>
+        </ion-col>
+        <ion-col col-4 class="text">
+          <p class="usd">Earnings</p>
+          <p class="evolution">{{d.daily | number}}</p>
+        </ion-col>
+             <ion-col col-4 class="text">
+          <p class="rank"> Elapse Date</p>
+          <p class="name">{{d.elapse}}</p>
+        </ion-col>
+
+
+        <ion-col col-1>
+          <span class="indicator"><ion-icon icon="md-arrow-dropright"></ion-icon></span>
+        </ion-col>
+
+         <button ion-button color="primary" block class="btn-theme-big-red">Withdraw</button>
+
+      </ion-row>
+
+         
+    </div>
+  </div>
+</ion-content>

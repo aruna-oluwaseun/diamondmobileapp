@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Investments</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div id="profile-bg" [ngStyle]="{'background-image': 'url(' + imageUrl +')'}"></div>
+  <div id="content">
+      
+    <ion-list>
+      <button ion-item *ngFor="let trans of deposits">
+          <h3>Status:{{trans.status}}</h3>
+          <p>
+          Investment id:{{trans.id}} </p>
+        <p>  Amount: ₦{{trans.amount}}: </p>
+          <p>Accrued Amount: ₦{{trans.returns}}: </p>
+        <p>  Investment Date:{{trans.date}}
+          </p>
+        </button>
+    </ion-list>
+  </div>
+</ion-content>

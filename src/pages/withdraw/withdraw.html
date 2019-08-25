@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-navbar primary>
+    <ion-title>Withdraw</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-avatar item-start (click)="updateProfileImage()">
+        <img [src]="user.imageUrl ? user.imageUrl : placeholderPicture">
+      </ion-avatar>
+      <p class="username">Earnings :₦ {{ daily | number}} </p>
+      
+      
+    </ion-list-header>
+  </ion-list>
+  <ion-list no-border>
+    <ion-list-header>
+      Withdrawal Information
+    </ion-list-header>
+      <ion-item>
+      <ion-icon  name='cash' item-start></ion-icon>
+      <ion-label>Withdrawals: ₦{{ daily | number }} </ion-label>
+     <h3></h3>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='cash' item-start></ion-icon>
+      <ion-label>Charges:₦ {{ daily * 0.03| number }} </ion-label>
+     <h3></h3>
+    </ion-item>
+
+     <ion-item>
+      <ion-icon name='cash' item-start></ion-icon>
+      <ion-label>Amount to be withdrawn:₦ {{ daily - daily * 0.03| number }} </ion-label>
+     <h3></h3>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-icon name='cash' item-start></ion-icon>
+      <ion-label>Account Number:{{ num }} </ion-label>
+     <h3></h3>
+    </ion-item>
+
+     <ion-item>
+      <ion-icon name='cash' item-start></ion-icon>
+      <ion-label>Account Name:{{ account }} </ion-label>
+     <h3></h3>
+    </ion-item>
+
+
+     <ion-item>
+      <ion-icon name='cash' item-start></ion-icon>
+      <ion-label>Bank:{{ bank }} </ion-label>
+     <h3></h3>
+    </ion-item>
+      <ion-item>
+          <button ion-button color="dark" round outline>Withdraw Funds</button>
+      </ion-item>
+  </ion-list>
+</ion-content>

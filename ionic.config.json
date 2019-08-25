@@ -1,0 +1,7 @@
+{
+  "name": "cash-wallet",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

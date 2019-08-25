@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-navbar primary>
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-avatar item-start (click)="updateProfileImage()">
+        <img [src]="user.imageUrl ? user.imageUrl : placeholderPicture">
+      </ion-avatar>
+      <p class="username">{{firstname}} {{lastname}}</p>
+      <p>Acount</p>
+    </ion-list-header>
+  </ion-list>
+  <ion-list no-border>
+    <ion-list-header>
+      Bank Details
+    </ion-list-header>
+    <ion-item>
+      <ion-icon name='settings' item-start></ion-icon>
+      <ion-label>Account Number:{{num}} </ion-label>
+     
+    </ion-item>
+
+      <ion-item>
+      <ion-icon name='settings' item-start></ion-icon>
+      <ion-label>Account Name:{{account}} </ion-label>
+     
+    </ion-item>
+
+     <ion-item>
+      <ion-icon name='settings' item-start></ion-icon>
+      <ion-label>Bank:{{bank}} </ion-label>
+     
+    </ion-item>
+  </ion-list>
+ 
+ 
+  
+  <ion-list>
+    <ion-list-header>
+      Other Info
+    </ion-list-header>
+<ion-item>
+      <ion-icon name='settings' item-start></ion-icon>
+      <ion-label>Email Address:{{email}} </ion-label>
+     
+    </ion-item>
+
+      <ion-item>
+      <ion-icon name='settings' item-start></ion-icon>
+      <ion-label>Home Address:{{address}} </ion-label>
+     
+    </ion-item>
+
+     <ion-item>
+      <ion-icon name='settings' item-start></ion-icon>
+      <ion-label>Phone Number:{{phone}} </ion-label>
+     
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='power' item-start></ion-icon>
+      <button ion-button (click)="logOut()" item-end>
+      Logout
+      </button>
+    </ion-item>
+  </ion-list>
+</ion-content>
